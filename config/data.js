@@ -1,4 +1,4 @@
-const { createPool } = require("mysql");
+/*const { createPool } = require("mysql");
 
 const pool = createPool({
   //port: 3306,
@@ -8,4 +8,4 @@ const pool = createPool({
   database: process.env.MYSQL_DB
 });
 
-module.exports = pool;
+module.exports = pool;*/
