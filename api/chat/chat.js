@@ -1,5 +1,6 @@
 //var users = ['1':{"id": 1, "name":"김영렬" }]
 var users = {'1':{"id":1, "name":"김영렬"}}
+var userImage = [{"userid": 1, "image": "https://previews.123rf.com/images/primeproud/primeproud1201/primeproud120100106/11875885-새로운-종이-시트와-비어있는-.jpg"}]
 let analysisKey = "5543323700649639825"
 var chatArr = [{"id": 1, "userid": 1, "chat": "안녕하세요", "mind": "신뢰"},{"id": 1, "userid": 1, "chat": "안녕하세요", "mind": "신뢰"}]
 //var chatArr = []
@@ -36,7 +37,16 @@ module.exports = {
                         success: 1,
                         data: chatArr
                 });
-	}/*
+	},
+	photoview: (req, res) => {
+		const body = req.body;
+		let Arr = userImage.filter(elem=>elem.id == body.id)
+		return res.json ({
+			success: 1,
+			data: Arr
+		});
+	}
+	/*
 	analysis: (req, res) => {
 		const chatID = req.params.id;
 		
